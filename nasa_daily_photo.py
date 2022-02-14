@@ -6,7 +6,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 def send_photo(date, explanation):
     api_bot = os.environ.get("api_bot")
-    chat_id = os.environ.get("chat_id")
+    chat_id = os.environ.get("user_id")
     bot = telepot.Bot(api_bot)
     bot.sendMessage(chat_id, date)
     bot.sendMessage(chat_id, explanation)
